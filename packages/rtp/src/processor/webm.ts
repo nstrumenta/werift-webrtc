@@ -286,9 +286,9 @@ export const Max32Uint = Number(0x01n << 32n) - 1;
 /**32767 */
 export const MaxSinged16Int = (0x01 << 16) / 2 - 1;
 
-export const DurationPosition = 83;
+export const DurationPosition = 0x83;
 
-export const SegmentSizePosition = 40;
+export const SegmentSizePosition = 0x40;
 
 export function replaceSegmentSize(totalFileSize: number) {
   const bodySize = totalFileSize - SegmentSizePosition;
