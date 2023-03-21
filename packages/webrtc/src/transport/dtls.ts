@@ -284,7 +284,7 @@ export const DtlsStates = [
   "closed",
   "failed",
 ] as const;
-export type DtlsState = typeof DtlsStates[number];
+export type DtlsState = (typeof DtlsStates)[number];
 
 export type DtlsRole = "auto" | "server" | "client";
 

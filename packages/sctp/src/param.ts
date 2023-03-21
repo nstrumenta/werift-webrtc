@@ -110,7 +110,7 @@ export const reconfigResult = {
   ReconfigResultSuccessPerformed: 1,
   BadSequenceNumber: 5,
 } as const;
-type ReconfigResult = typeof reconfigResult[keyof typeof reconfigResult];
+type ReconfigResult = (typeof reconfigResult)[keyof typeof reconfigResult];
 
 export class ReconfigResponseParam {
   static type = 16; // Re-configuration Response Parameter

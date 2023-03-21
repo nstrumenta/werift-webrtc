@@ -247,5 +247,5 @@ export class WEBMBuilder {
 }
 
 const supportedCodecs = ["MPEG4/ISO/AVC", "VP8", "VP9", "AV1", "OPUS"] as const;
-export type SupportedCodec = typeof supportedCodecs[number];
+export type SupportedCodec = (typeof supportedCodecs)[number];
 const millisecond = 1000000;

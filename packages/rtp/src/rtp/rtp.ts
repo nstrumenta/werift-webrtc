@@ -7,7 +7,7 @@ export const ExtensionProfiles = {
   TwoByte: 0x1000, // 4096
 } as const;
 type ExtensionProfile =
-  typeof ExtensionProfiles[keyof typeof ExtensionProfiles];
+  (typeof ExtensionProfiles)[keyof typeof ExtensionProfiles];
 
 const seqNumOffset = 2;
 const timestampOffset = 4;

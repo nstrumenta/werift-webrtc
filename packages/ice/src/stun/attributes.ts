@@ -144,7 +144,7 @@ export class AttributeRepository {
     return this.attributes;
   }
 
-  setAttribute(key: typeof AttributeKeys[number], value: any) {
+  setAttribute(key: (typeof AttributeKeys)[number], value: any) {
     const exist = this.attributes.find((a) => a[0] === key);
     if (exist) {
       exist[1] = value;
@@ -162,7 +162,7 @@ export class AttributeRepository {
     return attribute[1];
   }
 
-  get attributesKeys(): typeof AttributeKeys[number][] {
+  get attributesKeys(): (typeof AttributeKeys)[number][] {
     return this.attributes.map((a) => a[0]);
   }
 
@@ -171,7 +171,7 @@ export class AttributeRepository {
   }
 }
 
-export type AttributeKey = typeof AttributeKeys[number];
+export type AttributeKey = (typeof AttributeKeys)[number];
 
 export type AttributePair = [AttributeKey, any];
 

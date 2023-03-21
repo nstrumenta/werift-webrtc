@@ -12,7 +12,7 @@ const err = debug("werift-dtls : packages/dtls/src/flight/flight.ts : err");
 
 const flightTypes = ["PREPARING", "SENDING", "WAITING", "FINISHED"] as const;
 
-type FlightType = typeof flightTypes[number];
+type FlightType = (typeof flightTypes)[number];
 
 export abstract class Flight {
   state: FlightType = "PREPARING";

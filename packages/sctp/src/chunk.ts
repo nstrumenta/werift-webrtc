@@ -428,7 +428,7 @@ export class ShutdownCompleteChunk extends Chunk {
   }
 }
 
-const CHUNK_CLASSES: typeof Chunk[] = [
+const CHUNK_CLASSES: (typeof Chunk)[] = [
   DataChunk,
   InitChunk,
   InitAckChunk,

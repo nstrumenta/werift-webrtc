@@ -107,10 +107,10 @@ export const IceTransportStates = [
   "failed",
   "closed",
 ] as const;
-export type RTCIceConnectionState = typeof IceTransportStates[number];
+export type RTCIceConnectionState = (typeof IceTransportStates)[number];
 
 export const IceGathererStates = ["new", "gathering", "complete"] as const;
-export type IceGathererState = typeof IceGathererStates[number];
+export type IceGathererState = (typeof IceGathererStates)[number];
 
 export class RTCIceGatherer {
   onIceCandidate: (candidate: IceCandidate) => void = () => {};

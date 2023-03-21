@@ -111,7 +111,7 @@ export const Sendrecv = "sendrecv";
 
 export const Directions = [Inactive, Sendonly, Recvonly, Sendrecv] as const;
 
-export type Direction = typeof Directions[number];
+export type Direction = (typeof Directions)[number];
 
 type SimulcastDirection = "send" | "recv";
 
